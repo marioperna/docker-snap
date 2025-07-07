@@ -14,6 +14,6 @@ RUN curl -L \
 RUN mv /usr/share/nginx/html/Snap-10.7.2/* /usr/share/nginx/html/ && \
     rm -rf /usr/share/nginx/html/Snap-10.7.2
 
-EXPOSE 80
+COPY ./nginx.conf /etc/nginx/nginx.conf
 
 CMD ["nginx", "-g", "daemon off;"]
